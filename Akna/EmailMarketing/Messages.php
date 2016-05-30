@@ -20,6 +20,7 @@ class Akna_EmailMarketing_Messages extends Akna_Client
      * 
      * @param array $fields The fields nome and html are required
      * @return boolean
+     * @throws Akna_Exception message creation exception
      */
     public function create( $fields = array() )
     {
@@ -42,6 +43,7 @@ class Akna_EmailMarketing_Messages extends Akna_Client
      * 
      * @param array $fields The fields titulo, email_remetente, assunto and email are required
      * @return boolean
+     * @throws Akna_Exception message creation exception
      */    
     public function test( $fields = array() )
     {
