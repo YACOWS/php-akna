@@ -1,9 +1,5 @@
 <?php 
 
-namespace Akna\EmailMarketing\Campaigns;
-
-use Akna\Client\Akna_Client;
-
 /**
  * This class allows interaction with campaigns.
  *

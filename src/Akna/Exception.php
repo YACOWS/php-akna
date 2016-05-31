@@ -1,7 +1,5 @@
 <?php
 
-namespace Akna\Exception;
-
 /**
  * Base exception class.
  *

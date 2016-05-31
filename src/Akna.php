@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Akna Client Library
  *
@@ -11,10 +12,6 @@
  * @see      http://www.akna.com.br/
  * @version  0.2
  */
-
-namespace Akna;
-
-use Akna\Container\Akna_Container;
 
 /**
  * Proxy class that provides access to all other modules.

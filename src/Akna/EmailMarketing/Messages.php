@@ -1,9 +1,5 @@
 <?php 
 
-namespace Akna\EmailMarketing\Messages;
-
-use Akna\Client\Akna_Client;
-
 /**
  * This class allows interaction with messages.
  *

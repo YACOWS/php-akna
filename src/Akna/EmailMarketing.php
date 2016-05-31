@@ -1,9 +1,5 @@
 <?php
 
-namespace Akna\EmailMarketing;
-
-use Akna\Container\Akna_Container;
-
 /**
  * Proxy class that provides access to all emailmarketing-related resources.
  *

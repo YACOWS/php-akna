@@ -1,7 +1,5 @@
 <?php
 
-namespace Akna\HttpClient;
-
 /**
  * Simple HTTP client using stream contexts.
  *

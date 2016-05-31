@@ -1,9 +1,5 @@
 <?php
 
-namespace Akna\EmailMarketing\Contacts;
-
-use Akna\Client\Akna_Client;
-
 /**
  * This class allows interaction with contact lists.
  *

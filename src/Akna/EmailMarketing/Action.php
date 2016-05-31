@@ -1,9 +1,5 @@
 <?php
 
-namespace Akna\EmailMarketing\Action;
-
-use Akna\Client\Akna_Client;
-
 /**
  * Created by PhpStorm.
  * User: eduardo

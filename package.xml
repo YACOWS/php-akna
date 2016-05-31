@@ -29,13 +29,13 @@
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
-   <file baseinstalldir="/" md5sum="a0aeee936c12db33045b202a72e6d1fe" name="Akna/Client.php" role="php" />
-   <file baseinstalldir="/" md5sum="04ca2bb21641b49196ddc27ad78b2771" name="Akna/Container.php" role="php" />
-   <file baseinstalldir="/" md5sum="ca318cddced2d96af2e599cd3c78bf24" name="Akna/EmailMarketing.php" role="php" />
-   <file baseinstalldir="/" md5sum="8c7b7cd8861ffbdab8d650edd660961a" name="Akna/Exception.php" role="php" />
-   <file baseinstalldir="/" md5sum="1ead22660bd731e12e8cc8fc8981b797" name="Akna/HttpClient.php" role="php" />
-   <file baseinstalldir="/" md5sum="434de140e79be0e5619296d495a6b2c2" name="Akna/EmailMarketing/Contacts.php" role="php" />
-   <file baseinstalldir="/" md5sum="f8e95114be8dd6640996cff2a3c2259d" name="Akna.php" role="php" />
+   <file baseinstalldir="/" md5sum="a0aeee936c12db33045b202a72e6d1fe" name="src/Akna/Client.php" role="php" />
+   <file baseinstalldir="/" md5sum="04ca2bb21641b49196ddc27ad78b2771" name="src/Akna/Container.php" role="php" />
+   <file baseinstalldir="/" md5sum="ca318cddced2d96af2e599cd3c78bf24" name="src/Akna/EmailMarketing.php" role="php" />
+   <file baseinstalldir="/" md5sum="8c7b7cd8861ffbdab8d650edd660961a" name="src/Akna/Exception.php" role="php" />
+   <file baseinstalldir="/" md5sum="1ead22660bd731e12e8cc8fc8981b797" name="src/Akna/HttpClient.php" role="php" />
+   <file baseinstalldir="/" md5sum="434de140e79be0e5619296d495a6b2c2" name="src/Akna/EmailMarketing/Contacts.php" role="php" />
+   <file baseinstalldir="/" md5sum="f8e95114be8dd6640996cff2a3c2259d" name="src/Akna.php" role="php" />
   </dir>
  </contents>
  <dependencies>
