@@ -1,5 +1,8 @@
 <?php
-require_once 'Akna/Client.php';
+
+namespace Akna\Container;
+
+use Akna\Client\Akna_Client;
 
 /**
  * Base Container class that allows lazy instantiation of objects.

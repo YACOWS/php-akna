@@ -1,5 +1,6 @@
 <?php
-require_once 'Akna/HttpClient.php';
+
+namespace Akna\Client;
 
 /**
  * Base class that contains an HttpClient to interact with the API.

@@ -1,5 +1,6 @@
 <?php
-require_once 'Akna/Exception.php';
+
+namespace Akna\HttpClient;
 
 /**
  * Simple HTTP client using stream contexts.

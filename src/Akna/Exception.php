@@ -1,4 +1,7 @@
 <?php
+
+namespace Akna\Exception;
+
 /**
  * Base exception class.
  *
@@ -9,7 +12,7 @@
  * @link     http://github.com/w3p/php-akna
  * @version  0.1
  */
-class Akna_Exception extends Exception
+class Akna_Exception extends \Exception
 {
 	
 }

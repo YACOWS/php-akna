@@ -12,7 +12,9 @@
  * @version  0.2
  */
 
-require_once 'Akna/Container.php';
+namespace Akna;
+
+use Akna\Container\Akna_Container;
 
 /**
  * Proxy class that provides access to all other modules.
