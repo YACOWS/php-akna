@@ -73,4 +73,45 @@ class Akna_EmailMarketing_Contacts extends Akna_Client
             
         return $arrList;
     }
+
+    /**
+     * Add a new contact if it doesn't exists yet
+     * 
+     * @param $email string Contact e-mail
+     * @param $list string Contact list name
+     * @param array $fields Contact fields to add
+     * 
+     * @throws Akna_Exception
+     * 
+     * @return bool True if inserted and false if it exists
+     */
+    public function addNew($email, $list, array $fields = array()) {
+        // First check if contact already exists
+        try {
+            $contact = $this->get(
+                $email,
+                $list
+            );
+        } catch (Akna_Exception $e) {
+            if ($e->getCode() == 99) {
+                // Contact not found
+                $contact = null;
+            } else {
+                // Continue exception
+                throw $e;
+            }
+        }
+
+        
+        if (empty($contact)) {
+            // If contact doesn't exists, add it
+            return $this->add(
+                $email,
+                $list,
+                $fields
+            );
+        } else {
+            return false;
+        }
+    }
 }
