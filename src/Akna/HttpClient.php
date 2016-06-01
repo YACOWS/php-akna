@@ -172,7 +172,8 @@ class Akna_HttpClient
         }
 
         $sxe    = simplexml_load_string($responseBody);
-        $return = array_pop($sxe->xpath('//RETURN'));
+        $xpath_array = $sxe->xpath('//RETURN');
+        $return = array_pop($xpath_array);
 
         // if there is a <RETURN> element, we must check if it has an error code
         if ($return instanceof SimpleXmlElement) {

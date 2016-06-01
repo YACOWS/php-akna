@@ -71,10 +71,9 @@ class Akna_EmailMarketing_Action extends Akna_Client
         $lista,
         \DateTime $data_encerramento = null,
         \DateTime $datahora = null,
-        $company = null,
-        $endpoint = null
+        $company = null
     ) {
-        parent::__construct($username, $password, $company = null, $endpoint = null);
+        parent::__construct($username, $password, $company = null);
 
         $this->username = $username;
         $this->password = $password;
@@ -95,7 +94,10 @@ class Akna_EmailMarketing_Action extends Akna_Client
      * @param $data_encerramento string Data de encerramento no formato string
      */
     public function setDataEncerramento($data_encerramento) {
-        $this->data_encerramento = new \DateTime($data_encerramento);
+        // Null dates are not relevant
+        if (!empty($data_encerramento)) {
+            $this->data_encerramento = new \DateTime($data_encerramento);
+        }
     }
 
     /**
@@ -109,7 +111,10 @@ class Akna_EmailMarketing_Action extends Akna_Client
      * @return string Closing date as string
      */
     public function getDataEncerramentoStr() {
-        return $this->data_encerramento->format('Y-m-d H:i:s');
+        if (empty($this->data_encerramento)) {
+            return null;
+        }
+        return $this->data_encerramento->format('Y-m-d');
     }
 
     /**
@@ -141,6 +146,7 @@ class Akna_EmailMarketing_Action extends Akna_Client
             'email_remetente' => $this->email_remetente,
             'email_retorno' => $this->email_retorno,
             'assunto' => $this->assunto,
+            'lista' => $this->lista,
             'agendar' => array(
                 'datahora' => $this->getDataHoraStr()
             )
