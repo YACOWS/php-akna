@@ -69,8 +69,8 @@ class Akna_EmailMarketing_Action extends Akna_Client
         $email_retorno,
         $assunto,
         $lista,
-        \DateTime $data_encerramento,
-        \DateTime $datahora,
+        \DateTime $data_encerramento = null,
+        \DateTime $datahora = null,
         $company = null,
         $endpoint = null
     ) {
@@ -89,6 +89,20 @@ class Akna_EmailMarketing_Action extends Akna_Client
         
         // Auto set name
         $this->nome = $this->mensagem . "-" . $this->getDataEncerramentoStr();
+    }
+
+    /**
+     * @param $data_encerramento string Data de encerramento no formato string
+     */
+    public function setDataEncerramento($data_encerramento) {
+        $this->data_encerramento = new \DateTime($data_encerramento);
+    }
+
+    /**
+     * @param $datahora string Data de início da campanha
+     */
+    public function setDataHora($datahora) {
+        $this->datahora = new \DateTime($datahora);
     }
     
     /**
