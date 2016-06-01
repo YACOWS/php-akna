@@ -85,9 +85,6 @@ class Akna_EmailMarketing_Action extends Akna_Client
         $this->lista = $lista;
         $this->data_encerramento = $data_encerramento;
         $this->datahora = $datahora;
-        
-        // Auto set name
-        $this->nome = $this->mensagem . "-" . $this->getDataEncerramentoStr();
     }
 
     /**
@@ -128,7 +125,7 @@ class Akna_EmailMarketing_Action extends Akna_Client
      * @return string Action generated name
      */
     public function getNome() {
-        return $this->nome;
+        return $this->mensagem . "-" . $this->getDataEncerramentoStr();
     }
 
     /**
@@ -139,7 +136,7 @@ class Akna_EmailMarketing_Action extends Akna_Client
      */
     public function create() {
         $fields = array(
-            'nome' => $this->nome,
+            'nome' => $this->getNome(),
             'mensagem' => $this->mensagem,
             'data_encerramento' => $this->getDataEncerramentoStr(),
             'nome_remetente' => $this->nome_remetente,
