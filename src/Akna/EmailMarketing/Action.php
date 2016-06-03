@@ -131,10 +131,11 @@ class Akna_EmailMarketing_Action extends Akna_Client
     /**
      * Create and send message to Akna 
      * 
+     * @param bool $response Whether we should return response or not
      * @return bool Success flag
      * @throws Akna_Exception Raises exception on error
      */
-    public function create() {
+    public function create($response = false) {
         $fields = array(
             'nome' => $this->getNome(),
             'mensagem' => $this->mensagem,
@@ -149,8 +150,13 @@ class Akna_EmailMarketing_Action extends Akna_Client
             )
         );
 
-        // Wait for exception on error
-        $this->getHttpClient()->send('19.05', 'emkt', $fields);
+        if ($response === false) {
+            // Wait for exception on error
+            $this->getHttpClient()->send('19.05', 'emkt', $fields);
+        } else {
+            // Wait for exception on error
+            return $this->getHttpClient()->send('19.05', 'emkt', $fields);
+        }
         
         return true;
     }

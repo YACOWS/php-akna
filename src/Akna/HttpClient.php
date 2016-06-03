@@ -136,7 +136,7 @@ class Akna_HttpClient
         if (isset($this->company) && !empty($this->company)) {
             $postFields['Client'] = $this->company;
         }
-
+        
         $context = stream_context_create(
             array('http' => array(
                 'method'          => 'POST',

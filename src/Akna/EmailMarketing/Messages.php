@@ -18,10 +18,11 @@ class Akna_EmailMarketing_Messages extends Akna_Client
      * @since 0.2
      * 
      * @param array $fields The fields nome and html are required
+     * @param bool $response Should we return response?
      * @return boolean
      * @throws Akna_Exception message creation exception
      */
-    public function create( $fields = array() )
+    public function create( $fields = array() , $response = false)
     {
         if( !isset( $fields['nome'] ) || empty( $fields['nome'] ) )
             throw new Akna_Exception( 'O nome da mensagem é requerido' );
@@ -29,8 +30,14 @@ class Akna_EmailMarketing_Messages extends Akna_Client
         if( !isset( $fields['html'] ) || empty( $fields['html'] ) )
             throw new Akna_Exception( 'O HTML da mensagem é requerido' );
 
-        $this->getHttpClient()->send( '15.05', 'emkt', $fields );
-
+        if ($response === false) {
+            // Wait for exception on error
+            $this->getHttpClient()->send('15.05', 'emkt', $fields);
+        } else {
+            // Wait for exception on error
+            return $this->getHttpClient()->send('15.05', 'emkt', $fields);
+        }
+        
         // if anything goes wrong an exception will be thrown anyway
         return true;
     }
