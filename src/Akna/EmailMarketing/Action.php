@@ -125,7 +125,7 @@ class Akna_EmailMarketing_Action extends Akna_Client
      * @return string Action generated name
      */
     public function getNome() {
-        return $this->mensagem . "-" . $this->getDataEncerramentoStr();
+        return $this->mensagem . "-action";
     }
 
     /**
