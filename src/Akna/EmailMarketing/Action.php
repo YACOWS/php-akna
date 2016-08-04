@@ -83,17 +83,27 @@ class Akna_EmailMarketing_Action extends Akna_Client
         $this->email_retorno = $email_retorno;
         $this->assunto = $assunto;
         $this->lista = $lista;
-        $this->data_encerramento = $data_encerramento;
+
+        if (empty($data_encerramento)) {
+            // O padrão é seis meses na frente
+            $this->data_encerramento = new \DateTime();
+            $this->data_encerramento->add(new \DateInterval('P6M'));
+        } else {
+            $this->data_encerramento = $data_encerramento;
+        }
         $this->datahora = $datahora;
     }
 
     /**
      * @param $data_encerramento string Data de encerramento no formato string
      */
-    public function setDataEncerramento($data_encerramento) {
-        // Null dates are not relevant
+    public function setDataEncerramento($data_encerramento = null) {
         if (!empty($data_encerramento)) {
             $this->data_encerramento = new \DateTime($data_encerramento);
+        } else {
+            // Ajusta data de encerramento para tempo máximo de seis meses
+            $this->data_encerramento = new \DateTime();
+            $this->data_encerramento->add(new \DateInterval('P6M'));
         }
     }
 
