@@ -87,7 +87,7 @@ class Akna_EmailMarketing_Action extends Akna_Client
         if (empty($data_encerramento)) {
             // O padrão é seis meses na frente
             $this->data_encerramento = new \DateTime();
-            $this->data_encerramento->add(new \DateInterval('P6M'));
+            $this->data_encerramento->add(new \DateInterval('P5M'));
         } else {
             $this->data_encerramento = $data_encerramento;
         }
